@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bankapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/banklogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/banklogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme_white">
+
+        <activity android:name="com.example.bankapp.splash_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.bankapp.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity android:name="com.example.bankapp.user_list"
+            android:screenOrientation="portrait"
+            android:label="Banking System"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity android:name="com.example.bankapp.user_data"
+            android:parentActivityName="com.example.bankapp.user_list"
+            android:screenOrientation="portrait"
+            android:label="User Details"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.example.bankapp.sendtouser"
+            android:screenOrientation="portrait"
+            android:label="Transfer Money"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.example.bankapp.history_list"
+            android:parentActivityName="com.example.bankapp.user_list"
+            android:screenOrientation="portrait"
+            android:label="Transactions"
+            android:theme="@style/AppTheme"/>
+
+    </application>
+
+</manifest>
